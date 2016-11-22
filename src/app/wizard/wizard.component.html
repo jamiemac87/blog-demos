@@ -1,0 +1,22 @@
+<div class="ui centered raised card" *ngIf="((wizardNextStep|async)?.stepsCompleted < (wizardNextStep|async)?.totalSteps)">
+  <div class="content">
+    <h4 class="header">{{ (wizardNextStep|async)?.title }}</h4>
+    <div class="ui top right attached label">{{ (wizardNextStep|async)?.stepsCompleted }}/{{ (wizardNextStep|async)?.totalSteps }}</div>
+  </div>
+  <div class="content">
+    <p class="description">{{ (wizardNextStep|async)?.copy }}</p>
+  </div>
+  <div class="content">
+    <div class="ui relaxed divided list" *ngFor="let item of (wizardNextStep|async)?.list">
+      <div class="item">
+        <i class="large github middle aligned icon"></i>
+        <div class="content">
+          <h5>{{ item }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="extra content">
+    <button class="ui button" (click)="navigate()">{{ (wizardNextStep|async)?.buttonCopy }}</button>
+  </div>
+</div>
