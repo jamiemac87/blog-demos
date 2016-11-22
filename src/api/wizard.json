@@ -1,0 +1,13 @@
+{
+  "title": "Let's get you set up",
+  "copy": "In order to start using this service please select a plan",
+  "buttonCopy": "Select a plan",
+  "link": "http://google.co.uk",
+  "totalSteps": 4,
+  "stepsCompleted": 2,
+  "list": [
+    "List item one",
+    "List item two",
+    "List item three"
+  ]
+}
